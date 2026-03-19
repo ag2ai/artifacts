@@ -1,0 +1,30 @@
+{
+  "name": "fullstack-multi-agent",
+  "type": "template",
+  "display_name": "Full-Stack Multi-Agent App",
+  "description": "A full-stack application with a FastAPI backend orchestrating an AG2 multi-agent team and a React + Vite frontend with real-time chat UI",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["fullstack", "react", "fastapi", "multi-agent", "websocket", "chat"],
+  "template": {
+    "scaffold": "scaffold/",
+    "variables": {
+      "project_name": {
+        "prompt": "Project name",
+        "default": "my-agent-app",
+        "transform": "slug"
+      },
+      "description": {
+        "prompt": "Project description",
+        "default": "A full-stack multi-agent application"
+      }
+    },
+    "ignore": ["__pycache__", "*.pyc", ".git", "node_modules"],
+    "post_install": []
+  },
+  "skills": {
+    "dir": "skills/",
+    "auto_install": true
+  }
+}
