@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '*/*/artifact.json'  # Any artifact.json change triggers regeneration
+      - "*/*/artifact.json" # Any artifact.json change triggers regeneration
 
 jobs:
   generate:
@@ -13,12 +13,10 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{secrets.REGISTRY_PAT}}
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Generate registry.json
         run: python generate_registry.py
