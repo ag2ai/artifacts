@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.REGISTRY_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
 
       - uses: actions/setup-python@v5
