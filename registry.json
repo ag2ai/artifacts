@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated": "2026-03-19T04:42:42Z",
+  "updated": "2026-03-19T06:53:27Z",
   "artifacts": [
     {
       "name": "ag2",
@@ -32,18 +32,20 @@
       ]
     },
     {
-      "name": "mcp-server-python",
+      "name": "fullstack-multi-agent",
       "owner": "ag2ai",
       "type": "template",
-      "display_name": "MCP Server (Python)",
-      "description": "A production-ready Model Context Protocol server in Python with FastMCP, tool definitions, and tests",
+      "display_name": "Full-Stack Multi-Agent App",
+      "description": "A full-stack application with a FastAPI backend orchestrating an AG2 multi-agent team and a React + Vite frontend with real-time chat UI",
       "version": "1.0.0",
-      "path": "templates/mcp-server-python",
+      "path": "templates/fullstack-multi-agent",
       "tags": [
-        "mcp",
-        "python",
-        "server",
-        "tools"
+        "fullstack",
+        "react",
+        "fastapi",
+        "multi-agent",
+        "websocket",
+        "chat"
       ]
     },
     {
