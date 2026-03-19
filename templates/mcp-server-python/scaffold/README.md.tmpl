@@ -1,0 +1,68 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Quick start
+
+Install dependencies:
+
+```bash
+uv sync
+```
+
+Run the server in development mode (interactive inspector):
+
+```bash
+mcp dev src/server.py
+```
+
+Run the server normally (stdio transport):
+
+```bash
+mcp run src/server.py
+```
+
+## Adding a new tool
+
+Open `src/server.py` and add a function decorated with `@mcp.tool()`:
+
+```python
+@mcp.tool()
+def my_tool(arg: str) -> str:
+    """Describe what the tool does.
+
+    Args:
+        arg: Describe the argument.
+
+    Returns:
+        What the tool returns.
+    """
+    return f"Result: {arg}"
+```
+
+The function's docstring becomes the tool description that LLMs see, so make it
+clear and specific. Type annotations on the parameters are used to generate the
+tool's input schema automatically.
+
+## Running tests
+
+```bash
+uv run pytest
+```
+
+## Project structure
+
+```
+{{ project_name }}/
+  src/
+    __init__.py
+    server.py      # MCP server and tool definitions
+  tests/
+    test_tools.py   # Tool unit tests
+  pyproject.toml
+  README.md
+```
+
+## License
+
+Apache-2.0

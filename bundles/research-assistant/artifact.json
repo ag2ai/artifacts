@@ -1,0 +1,19 @@
+{
+  "name": "research-assistant",
+  "type": "bundle",
+  "display_name": "Research Assistant Starter Kit",
+  "description": "Complete research toolkit: web search tool, research agent, eval dataset, and skills",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["research", "starter-kit", "bundle"],
+  "bundle": {
+    "artifacts": [
+      {"ref": "skills/ag2", "required": true},
+      {"ref": "tools/web-search", "required": true},
+      {"ref": "agents/research-analyst", "required": true},
+      {"ref": "datasets/agent-eval-bench", "required": false}
+    ],
+    "install_order": ["skills", "tools", "agents", "datasets"]
+  }
+}

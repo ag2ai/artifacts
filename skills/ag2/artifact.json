@@ -1,0 +1,11 @@
+{
+  "name": "ag2",
+  "type": "skills",
+  "display_name": "AG2 Skills",
+  "description": "Coding guidance, workflows, and agents for building multi-agent applications with the AG2 framework",
+  "version": "0.3.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["ag2", "multi-agent", "autogen"],
+  "skills": {"dir": ".", "auto_install": true}
+}

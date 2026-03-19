@@ -1,0 +1,20 @@
+{
+  "name": "code-reviewer",
+  "type": "agent",
+  "display_name": "Code Reviewer",
+  "description": "Expert code review agent that checks for correctness, security, performance, and style",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["code-review", "quality", "security"],
+  "agent": {
+    "source": "agent.md",
+    "model": "sonnet",
+    "tools": ["Read", "Grep", "Glob", "Bash"],
+    "max_turns": 30,
+    "memory": "project",
+    "mcp_servers": {},
+    "preload_skills": []
+  },
+  "skills": {"dir": "skills/", "auto_install": true}
+}

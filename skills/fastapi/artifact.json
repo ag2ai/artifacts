@@ -1,0 +1,11 @@
+{
+  "name": "fastapi",
+  "type": "skills",
+  "display_name": "FastAPI Skills",
+  "description": "Patterns and best practices for building FastAPI applications with async endpoints, dependency injection, and Pydantic models",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["fastapi", "api", "python", "async"],
+  "skills": {"dir": ".", "auto_install": true}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "agent-eval-bench",
+  "type": "dataset",
+  "display_name": "Agent Eval Benchmark",
+  "description": "Evaluation benchmark for testing AG2 agent capabilities across tool use, reasoning, and multi-agent coordination",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["eval", "benchmark", "testing"],
+  "dataset": {
+    "inline": "data/",
+    "remote": [
+      {
+        "name": "full-bench.jsonl",
+        "url": "https://huggingface.co/datasets/ag2ai/eval-bench/resolve/main/full-bench.jsonl",
+        "size": "12MB",
+        "sha256": ""
+      }
+    ],
+    "format": "yaml",
+    "schema": {
+      "fields": [
+        {"name": "name", "type": "string", "description": "Test case name"},
+        {"name": "input", "type": "string", "description": "User input prompt"},
+        {"name": "category", "type": "string", "description": "Capability category"},
+        {"name": "difficulty", "type": "string", "description": "easy, medium, or hard"},
+        {"name": "assertions", "type": "array", "description": "Expected behaviors"}
+      ]
+    },
+    "splits": {
+      "sample": "data/sample.yaml"
+    },
+    "eval_compatible": true
+  },
+  "skills": {"dir": "skills/", "auto_install": true}
+}

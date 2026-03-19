@@ -1,0 +1,136 @@
+{
+  "version": "1",
+  "updated": "2026-03-19T04:23:44Z",
+  "artifacts": [
+    {
+      "name": "ag2",
+      "owner": "ag2ai",
+      "type": "skills",
+      "display_name": "AG2 Skills",
+      "description": "Coding guidance, workflows, and agents for building multi-agent applications with the AG2 framework",
+      "version": "0.3.0",
+      "path": "skills/ag2",
+      "tags": [
+        "ag2",
+        "multi-agent",
+        "autogen"
+      ]
+    },
+    {
+      "name": "fastapi",
+      "owner": "ag2ai",
+      "type": "skills",
+      "display_name": "FastAPI Skills",
+      "description": "Patterns and best practices for building FastAPI applications with async endpoints, dependency injection, and Pydantic models",
+      "version": "1.0.0",
+      "path": "skills/fastapi",
+      "tags": [
+        "fastapi",
+        "api",
+        "python",
+        "async"
+      ]
+    },
+    {
+      "name": "mcp-server-python",
+      "owner": "ag2ai",
+      "type": "template",
+      "display_name": "MCP Server (Python)",
+      "description": "A production-ready Model Context Protocol server in Python with FastMCP, tool definitions, and tests",
+      "version": "1.0.0",
+      "path": "templates/mcp-server-python",
+      "tags": [
+        "mcp",
+        "python",
+        "server",
+        "tools"
+      ]
+    },
+    {
+      "name": "github-mcp",
+      "owner": "ag2ai",
+      "type": "tool",
+      "display_name": "GitHub MCP Server",
+      "description": "GitHub operations via Model Context Protocol \u2014 repos, issues, pull requests, and code search",
+      "version": "1.0.0",
+      "path": "tools/github-mcp",
+      "tags": [
+        "github",
+        "mcp",
+        "git",
+        "devtools"
+      ]
+    },
+    {
+      "name": "web-search",
+      "owner": "ag2ai",
+      "type": "tool",
+      "display_name": "Web Search",
+      "description": "Search the web and extract text content from pages for AG2 agents",
+      "version": "1.0.0",
+      "path": "tools/web-search",
+      "tags": [
+        "web",
+        "search",
+        "scraping"
+      ]
+    },
+    {
+      "name": "agent-eval-bench",
+      "owner": "ag2ai",
+      "type": "dataset",
+      "display_name": "Agent Eval Benchmark",
+      "description": "Evaluation benchmark for testing AG2 agent capabilities across tool use, reasoning, and multi-agent coordination",
+      "version": "1.0.0",
+      "path": "datasets/agent-eval-bench",
+      "tags": [
+        "eval",
+        "benchmark",
+        "testing"
+      ]
+    },
+    {
+      "name": "code-reviewer",
+      "owner": "ag2ai",
+      "type": "agent",
+      "display_name": "Code Reviewer",
+      "description": "Expert code review agent that checks for correctness, security, performance, and style",
+      "version": "1.0.0",
+      "path": "agents/code-reviewer",
+      "tags": [
+        "code-review",
+        "quality",
+        "security"
+      ]
+    },
+    {
+      "name": "research-analyst",
+      "owner": "ag2ai",
+      "type": "agent",
+      "display_name": "Research Analyst",
+      "description": "Autonomous research agent that searches the web, evaluates sources, and synthesizes structured reports",
+      "version": "1.0.0",
+      "path": "agents/research-analyst",
+      "tags": [
+        "research",
+        "web",
+        "analysis",
+        "reports"
+      ]
+    },
+    {
+      "name": "research-assistant",
+      "owner": "ag2ai",
+      "type": "bundle",
+      "display_name": "Research Assistant Starter Kit",
+      "description": "Complete research toolkit: web search tool, research agent, eval dataset, and skills",
+      "version": "1.0.0",
+      "path": "bundles/research-assistant",
+      "tags": [
+        "research",
+        "starter-kit",
+        "bundle"
+      ]
+    }
+  ]
+}

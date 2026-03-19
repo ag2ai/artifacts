@@ -1,0 +1,22 @@
+{
+  "name": "web-search",
+  "type": "tool",
+  "display_name": "Web Search",
+  "description": "Search the web and extract text content from pages for AG2 agents",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["web", "search", "scraping"],
+  "tool": {
+    "kind": "ag2",
+    "source": "src/",
+    "functions": [
+      {"name": "web_search", "description": "Search the web using DuckDuckGo"},
+      {"name": "fetch_page", "description": "Fetch and extract text from a URL"}
+    ],
+    "requires": ["httpx>=0.27", "beautifulsoup4>=4.12"],
+    "install_to": "tools/"
+  },
+  "skills": {"dir": "skills/", "auto_install": true},
+  "depends": ["skills/ag2"]
+}

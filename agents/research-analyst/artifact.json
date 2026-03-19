@@ -1,0 +1,21 @@
+{
+  "name": "research-analyst",
+  "type": "agent",
+  "display_name": "Research Analyst",
+  "description": "Autonomous research agent that searches the web, evaluates sources, and synthesizes structured reports",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["research", "web", "analysis", "reports"],
+  "agent": {
+    "source": "agent.md",
+    "model": "sonnet",
+    "tools": ["Read", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"],
+    "max_turns": 50,
+    "memory": "project",
+    "mcp_servers": {},
+    "preload_skills": []
+  },
+  "skills": {"dir": "skills/", "auto_install": true},
+  "depends": ["skills/ag2"]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "github-mcp",
+  "type": "tool",
+  "display_name": "GitHub MCP Server",
+  "description": "GitHub operations via Model Context Protocol — repos, issues, pull requests, and code search",
+  "version": "1.0.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["github", "mcp", "git", "devtools"],
+  "tool": {
+    "kind": "mcp",
+    "runtime": "python",
+    "source": "src/",
+    "entry_point": "server.py",
+    "transport": "stdio",
+    "mcp_config": {
+      "command": "uv",
+      "args": ["run", "--directory", "${toolDir}", "src/server.py"],
+      "env": {"GITHUB_TOKEN": "${GITHUB_TOKEN}"}
+    },
+    "tools_provided": [
+      {"name": "list_repos", "description": "List GitHub repositories for a user or org"},
+      {"name": "get_issue", "description": "Get details of a GitHub issue"},
+      {"name": "search_code", "description": "Search code across GitHub repositories"}
+    ],
+    "requires": ["mcp[cli]>=1.0", "httpx>=0.27"]
+  },
+  "skills": {"dir": "skills/", "auto_install": true},
+  "depends": ["skills/ag2"]
+}
