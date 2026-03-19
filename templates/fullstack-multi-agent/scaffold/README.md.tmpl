@@ -1,0 +1,49 @@
+# {{ project_name }}
+
+{{ description }}
+
+A full-stack application with an AG2 multi-agent backend (FastAPI + WebSocket) and a React frontend.
+
+## Architecture
+
+```
+{{ project_name }}/
+├── backend/          # FastAPI + AG2 multi-agent team
+│   ├── app/
+│   │   ├── main.py       # FastAPI app, REST + WebSocket endpoints
+│   │   ├── agents.py     # AG2 agent team: planner, coder, reviewer
+│   │   └── schemas.py    # Pydantic request/response models
+│   └── tests/
+├── frontend/         # React + Vite + TypeScript
+│   └── src/
+│       ├── App.tsx
+│       └── components/
+│           └── Chat.tsx  # WebSocket chat interface
+```
+
+## Quick start
+
+```bash
+# Backend
+cd backend
+uv sync
+cp .env.example .env   # add your API keys
+uv run uvicorn app.main:app --reload
+
+# Frontend (separate terminal)
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 — the chat UI connects to the backend WebSocket at ws://localhost:8000/ws/chat.
+
+## How it works
+
+1. User sends a message through the React chat UI
+2. The frontend opens a WebSocket connection to the backend
+3. FastAPI hands the message to an AG2 multi-agent team:
+   - **Planner** — breaks the request into steps
+   - **Coder** — implements the solution
+   - **Reviewer** — checks for correctness and suggests improvements
+4. Each agent response is streamed back to the frontend in real time
