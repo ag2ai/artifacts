@@ -1,6 +1,6 @@
-# AG2 Artifacts
+# AG2 Resource Hub
 
-The official artifact repository for the [AG2 CLI](https://github.com/ag2ai/ag2).
+The official resource repository for the [AG2 CLI](https://github.com/ag2ai/ag2).
 
 Install any artifact with:
 
