@@ -1,0 +1,18 @@
+{
+  "name": "test-playground",
+  "type": "tool",
+  "owner": "ag2ai",
+  "display_name": "AG2 CLI Test Playground",
+  "description": "Example agents, teams, and eval configs for testing the AG2 CLI.",
+  "version": "0.1.0",
+  "authors": ["ag2ai"],
+  "license": "Apache-2.0",
+  "tags": ["examples", "testing", "cli"],
+  "requires": {
+    "ag2": ">=0.6.0"
+  },
+  "tool": {
+    "kind": "ag2",
+    "source": "."
+  }
+}
